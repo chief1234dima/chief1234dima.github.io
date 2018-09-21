@@ -1,3 +1,7 @@
+@import "animation.css";
+
+@import "modal-box.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -180,67 +184,6 @@ main.hide .close-button { display: none; }
 .video-on { display: none; }
 
 /*-------------------------------------------
-  Animation
--------------------------------------------*/
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes snow {
-  0% {background-position: 0 0, 0 0, 0 0;}
-  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
-}
-
-@keyframes main-box-show {
-  0% {
-    right: -999px;
-    opacity: 0;
-  }
-  100% {
-    right: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes main-box-hide {
-  0% {
-    right: 0;
-    opacity: 1;
-  }
-  100% {
-    right: -999px;
-    opacity: 0;
-  }
-}
-
-@keyframes shiftVert {
-  0% { transform: translate(0, -200px); }
-  100% { transform: none; }
-}
-
-@keyframes shiftHoriz {
-  0% { transform: translate(-100px, 0) translateY(50vh) translateY(-50%); }
-  100% { transform: translateY(50vh) translateY(-50%); }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes fadeIn03 {
-  0% { opacity: 0; }
-  100% { opacity: 0.3; }
-}
-
-/*-------------------------------------------
   Start content
 -------------------------------------------*/
 
@@ -322,92 +265,6 @@ main.hide .close-button { display: none; }
 }
 
 .disable-video .bg-video { display: none; }
-
-/*-------------------------------------------
-  Modal dialog-box
--------------------------------------------*/
-
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal.show { display: flex; }
-
-.modal-content {
-  position: relative;
-  max-width: 30rem;
-  width: 100%;
-  max-height: 30rem;
-  height: 100%;
-  padding: 0 15px;
-  background-color: white;
-  box-shadow: 0 0 20px white;
-  text-align: center;
-}
-
-.show .modal-content { animation: shiftVert 0.5s; }
-
-.modal-header {
-  margin: 3rem 0;
-  padding: 1rem 0;
-}
-
-.icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  font-size: 15rem;
-  line-height: 0;
-  color: rgba(0, 0, 0, 0.1);
-}
-
-.modal-title {
-  margin-top: 1.5rem;
-  font-weight: 800;
-  font-size: 2.7rem;
-}
-
-.modal-header button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: block;
-  font-size: 1.5rem;
-  background-color: white;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: color 0.4s;
-}
-
-.modal-subscribe-form { padding: 3rem 0; }
-
-.subscribe-input {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  padding: 1rem 0;
-  font-weight: 500;
-  border: 2px solid rgba(6, 6, 12, 0.3);
-  text-align: center;
-}
-
-.subscribe-input:focus {
-  border-color: #06060c;
-  outline: none;
-}
 
 /*-------------------------------------------
   Main content
@@ -530,12 +387,14 @@ main h2 + p {
 .portfolio-item img {
   width: 100%;
   height: 100%;
+  box-shadow: 6px 6px 9px rgba(0,0,0,0.4);
   backface-visibility: hidden;
   transition: transform 1s;
   transform-style: preserve-3d;
 }
 
 .hover-block {
+  box-shadow: none;
   position: absolute;
   top: 1px;
   bottom: 1px;
@@ -550,7 +409,7 @@ main h2 + p {
   text-align: center;
   color: white;
   background: rgba(255, 38, 83, 0.8);
-  transition: transform 1s;
+  transition: transform 1s, box-shadow 1s;
   transform-style: preserve-3d;
 }
 
@@ -565,11 +424,14 @@ main h2 + p {
   transition: 0.5s;
 }
 
-.describe a:hover { transform: scale(1.4); }
-
 .portfolio-item:hover img { transform: rotateY(180deg); }
 
-.portfolio-item:hover .hover-block {  transform: rotateY(180deg); }
+.portfolio-item:hover .hover-block {
+  transform: rotateY(180deg);
+  box-shadow: -6px 6px 9px rgba(0,0,0,0.4);
+}
+
+.describe a:hover { transform: scale(1.4); }
 
 .resume { text-align: center; }
 
@@ -659,6 +521,10 @@ footer {
 /*-------------------------------------------
   Media
 -------------------------------------------*/
+
+@media (min-width: 1600px) {
+  .aside-nav { right: 50.5%; }
+}
 
 @media (max-width: 800px) {
   main.show { min-width: 100%; }
