@@ -129,17 +129,25 @@ function monthUp(elem, num) {
 //   document.querySelector('.aside-nav').style.top = scrolled + 'px';
 // });
 
+var flag = true;
+
 document.querySelector('.aside-nav').addEventListener('click', function (e) {
   if (e.target.tagName === 'SPAN'){
     e.preventDefault();
-    smoothScroll( document.querySelector( e.target.parentNode.getAttribute('href') ));
+    if (flag) {
+      flag = false;
+      smoothScroll( document.querySelector( e.target.parentNode.getAttribute('href') ));
+    }
   }
 });
 
 document.querySelector('.about-me__description').addEventListener('click', function (e) {
   if (e.target.tagName === 'A'){
     e.preventDefault();
-    smoothScroll( document.querySelector( e.target.getAttribute('href') ));
+    if (flag) {
+      flag = false;
+      smoothScroll( document.querySelector( e.target.getAttribute('href') ));
+    }
   }
 });
 
@@ -153,8 +161,11 @@ function smoothScroll(elem) {
     shift = coordY > 0 ? 30 : -30;
 
     if (coordY !== 0) {
-      if (coordY > 0 && (window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight)
+      if (coordY > 0 && (window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight) {
+        flag = true;
         return false;
+      }
+      
       
       if (coordY > 30 || coordY < -30) {
         window.scrollBy(0, shift);
@@ -162,6 +173,7 @@ function smoothScroll(elem) {
       } else {
         window.scrollBy(0, coordY);
         clearTimeout(timer);
+        flag = true;
         return false;
       }
     }
@@ -190,5 +202,8 @@ document.addEventListener('scroll', function() {
 
 document.querySelector('.up-button').addEventListener('click', function (e) {
   e.preventDefault();
-  smoothScroll( document.querySelector('.about-me'));
+  if (flag) {
+    flag = false;
+    smoothScroll( document.querySelector('.about-me'));
+  }
 });
