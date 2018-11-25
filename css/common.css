@@ -22,6 +22,11 @@ html {
   font: normal 16px/1.2 'Roboto', sans-serif;
 }
 
+body {
+  background: url('../img/p3.jpg') fixed top no-repeat;
+  background-size: cover;
+}
+
 .layout-center {
   max-width: 1180px;
   margin: 0 auto;
@@ -65,6 +70,7 @@ button {
   margin: 0 auto;
   font-weight: bold;
   font-size: 0.7em;
+  text-transform: uppercase;
   border: 2px solid rgb(229, 229, 229);
   transition: color 0.4s, border 0.4s;
 }
@@ -435,7 +441,8 @@ header .wrap {
   font-size: 1.2em;
   text-transform: uppercase;
   transform: translateY(-50%);
-  animation-fill-mode: forwards;
+  transition: 0.3s;
+  /*animation-fill-mode: forwards;*/
 }
 
 .service-item figcaption {
@@ -497,10 +504,7 @@ header .wrap {
   transition: all 0.2s ease-out;
 }
 
-.service-item:hover figure {
-  animation: bottom-to-top 0.3s;
-  animation-fill-mode: forwards;
-}
+.service-item:hover figure { top: 30%; }
 
 .service-item:hover p { top: 60%; }
 
@@ -525,6 +529,36 @@ header .wrap {
 .diff-color img { border-color: #006775; }
 
 /**--------temp end----------**/
+
+/*-------------------------------------------
+  7. Comments Section
+-------------------------------------------*/
+.comments {
+  position: relative;
+  padding: 15em 0;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  clear: both;
+
+}
+
+.comments h2 { text-transform: uppercase; }
+
+.comment__text {
+  margin: 1.5em auto;
+  max-width: 80%;
+  font: italic 1.5em/1.5 'Times New Roman', serif ;
+}
+
+.comment__author {
+  margin: 1.5em auto 2em;
+  font-size: 1.5em;
+}
+
+.comments .btn-default { font-size: 0.9em; }
+
+.comments button:hover { border-color: #54ad37; }
 
 /*-------------------------------------------
  7. Animation
@@ -578,12 +612,12 @@ header .wrap {
   100% { height: 5rem; }
 }
 
-@keyframes bottom-to-top {
-  0% { top: 50%; }
-  30% { top: 25%; }
-  90% { top: 32%; }
-  100% { top: 30%; }
-}
+/*@keyframes bottom-to-top {*/
+  /*0% { top: 50%; }*/
+  /*30% { top: 25%; }*/
+  /*90% { top: 32%; }*/
+  /*100% { top: 30%; }*/
+/*}*/
 
 
 /*-------------------------------------------
@@ -620,6 +654,10 @@ header .wrap {
   .text-block * { max-width: 90%; }
 
   .service-item { width: 33.333333%; }
+
+  .comments button {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -632,6 +670,14 @@ header .wrap {
   .header-wrap h2 { font-size: 2em; }
 
   .service-item figcaption h2 { font-size: 1.4em; }
+
+  .comments button {
+    margin: 0 1em;
+    padding: 1.2em;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: border-color 0.4s, color 0.4s;
+  }
 }
 
 @media (min-width: 1300px) {

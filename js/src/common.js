@@ -213,5 +213,47 @@ window.addEventListener('resize', () => {
   // }
 });
 
+/*--------------------------------
+ *  Comments
+ * -------------------------------*/
+(function () {
+  const comments = [{
+    text: 'Хочу выразить слова благодарности Анастасии Олеговне и Софии Владимировне ' +
+    'за ту теплую, дружелюбную и уютную атмосферу, которую они создают во время занятий...',
+    author: 'Галина Олейник'
+  }, {
+    text: 'Дорогие девочки! Спасибо за вашу любовь, заботу и очень тяжелый труд! Вы помогаете ' +
+    'не только детишкам, но и родителям поверить в лучшее, и обрести надежду...',
+    author: 'Інга Браславська'
+  }, {
+    text: 'Дякую за тренінг "Стоп незнайомець!". Сподобалась організація, діти всі дві години були зацікавлені ' +
+    'та залучені. Успіхів! Робіть ще щось цікаве та корисне.',
+    author: 'Dariya Venzel'
+  }, {
+    text: 'Уже несколько лет занимаемся со специалистами этого центра. Очень довольны результатами. Особая благодарность ' +
+    'Анастасии Олеговне!!! Всем рекомендую.',
+    author: 'Алена Косолапова'
+  }];
+  
+  $('.comment__text').innerHTML = `"${comments[comments.length - 1].text}"`;
+  $('.comment__author').innerHTML = comments[comments.length - 1].author;
+  
+  $('.comments .prev').addEventListener('click', changeComment);
+  $('.comments .next').addEventListener('click', changeComment);
+  
+  function changeComment(e) {
+    let text, author;
+    if (e.target.classList.contains('next')) {
+      ({text, author} = comments[0]);
+      comments.push(comments.shift());
+    } else {
+      comments.unshift(comments.pop());
+      ({text, author} = comments[comments.length - 1]);
+    }
+  
+    $('.comment__text').innerHTML = `"${text}"`;
+    $('.comment__author').innerHTML = author;
+  }
+})();
 
 
