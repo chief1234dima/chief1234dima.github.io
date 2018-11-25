@@ -64,7 +64,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 70%;
   max-width: 21.25rem;
   height: 4.5rem;
   margin: 0 auto;
@@ -535,7 +535,7 @@ header .wrap {
 -------------------------------------------*/
 .comments {
   position: relative;
-  padding: 15em 0;
+  padding: 10em 0;
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
   color: white;
@@ -548,7 +548,7 @@ header .wrap {
 .comment__text {
   margin: 1.5em auto;
   max-width: 80%;
-  font: italic 1.5em/1.5 'Times New Roman', serif ;
+  font: italic 1.5em/1.5 'Times New Roman', serif;
 }
 
 .comment__author {
@@ -558,11 +558,42 @@ header .wrap {
 
 .comments .btn-default { font-size: 0.9em; }
 
+.comments .btn-default span { font-size: 2em; }
+
+.comments button { padding: 2em 0; }
+
 .comments button:hover { border-color: #54ad37; }
 
+.career-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  background-color: #f3d03e;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.career-wrap .btn {
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  background-color: #000000;
+  color: white;
+}
+
+.career-wrap .btn:hover { background-color: #4f4f4f; }
+
 /*-------------------------------------------
- 7. Animation
+  8. Footer
 -------------------------------------------*/
+
+/*-------------------------------------------
+ 9. Animation
+-------------------------------------------*/
+.fade-in { animation: fadeIn 0.3s; }
+
 @keyframes menu-show {
   0% {
     left: -50rem;
@@ -612,6 +643,11 @@ header .wrap {
   100% { height: 5rem; }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /*@keyframes bottom-to-top {*/
   /*0% { top: 50%; }*/
   /*30% { top: 25%; }*/
@@ -621,7 +657,7 @@ header .wrap {
 
 
 /*-------------------------------------------
-  8. Media
+  10. Media
 -------------------------------------------*/
 @media (min-width: 768px) {
   .layout-center { padding: 0 5%; }
@@ -655,9 +691,7 @@ header .wrap {
 
   .service-item { width: 33.333333%; }
 
-  .comments button {
-    font-size: 1.5em;
-  }
+  .comments button { font-size: 1.5em; }
 }
 
 @media (min-width: 1024px) {
@@ -678,6 +712,13 @@ header .wrap {
     border-radius: 50%;
     transition: border-color 0.4s, color 0.4s;
   }
+
+  .career-wrap {
+    flex-direction: row;
+    font-size: 1.5em;
+  }
+
+  .career-wrap .btn { margin: 0 0 0 1em; }
 }
 
 @media (min-width: 1300px) {

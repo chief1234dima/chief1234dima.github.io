@@ -237,6 +237,7 @@ window.addEventListener('resize', function () {
 
   function changeComment(e) {
     var text, author;
+    var commentText = $('.comment__text');
 
     if (e.target.classList.contains('next')) {
       var _comments$ = comments[0];
@@ -250,7 +251,11 @@ window.addEventListener('resize', function () {
       author = _comments.author;
     }
 
-    $('.comment__text').innerHTML = "\"".concat(text, "\"");
+    commentText.innerHTML = "\"".concat(text, "\"");
     $('.comment__author').innerHTML = author;
+    commentText.classList.add('fade-in');
+    setTimeout(function () {
+      commentText.classList.remove('fade-in');
+    }, 300);
   }
 })();

@@ -243,6 +243,7 @@ window.addEventListener('resize', () => {
   
   function changeComment(e) {
     let text, author;
+    const commentText = $('.comment__text');
     if (e.target.classList.contains('next')) {
       ({text, author} = comments[0]);
       comments.push(comments.shift());
@@ -250,9 +251,13 @@ window.addEventListener('resize', () => {
       comments.unshift(comments.pop());
       ({text, author} = comments[comments.length - 1]);
     }
-  
-    $('.comment__text').innerHTML = `"${text}"`;
+    
+    commentText.innerHTML = `"${text}"`;
     $('.comment__author').innerHTML = author;
+    commentText.classList.add('fade-in');
+    setTimeout(() => {
+      commentText.classList.remove('fade-in');
+    }, 300);
   }
 })();
 
