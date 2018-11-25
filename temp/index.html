@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A portfolio of a beginner Front-End developer.
+		Here you can see examples of my works and my contacts.">
+	<meta name="robots" content="nofollow">
+    <title>Sagun Dmitry's Portfolio</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800|
+		Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontello-embedded.css">
+	<link rel="stylesheet" href="css/css.css?v=2">
+</head>
+<body>
+<!--Loader-->
+<div class="loader-box">
+	<div class="loader"></div>
+</div>
+
+<!--Aside navigation-->
+<nav class="aside-nav">
+	<ul class="nav-list">
+		<li class="nav-item"><a href="#about"><span>About</span></a></li>
+		<li class="nav-item"><a href="#skills"><span class="skill-link">Skills</span></a></li>
+		<li class="nav-item"><a href="#portfolio"><span>Portfolio</span></a></li>
+		<li class="nav-item"><a href="#resume"><span>Resume</span></a></li>
+		<li class="nav-item"><a href="#contact"><span>Contact</span></a></li>
+	</ul>
+</nav>
+
+<!--Background video-->
+<video autoplay muted loop class="bg-video">
+	<source src="img/bg_video.webm" type="video/webm">
+	<source src="img/bg_video.mp4" type="video/mp4">
+</video>
+
+<button class="video-off icon-stop white-col-hv"></button>
+<button class="video-on icon-play white-col-hv"></button>
+
+<section class="start">
+	<div class="start-content">
+		<a class="logo" href="#"><img src="img/logo.png" alt="Logotype"></a>
+		<h1>Sagun Dmitry's personal page!</h1>
+		<p>Feel free to contact me</p>
+		<div class="button-block">
+			<a href="#" class="btn alert-btn white-btn-hv">More information</a>
+			<a href="#" class="btn dark-btn white-btn-hv">Notify
+				<i class="icon-bell"></i>
+			</a>
+		</div>
+		<ul class="social-list">
+			<li><a href="#" class="icon-twitter red-col-hv"></a></li>
+			<li><a href="#" class="icon-facebook red-col-hv"></a></li>
+			<li><a href="#" class="icon-gplus red-col-hv"></a></li>
+			<li><a href="#" class="icon-linkedin red-col-hv"></a></li>
+			<li><a href="#" class="icon-mail-alt red-col-hv"></a></li>
+		</ul>
+	</div>
+	<a href="#" class="overlay"></a>
+</section>
+
+<div class="open-button"><a href="#" class="icon-menu white-col-hv"></a></div>
+
+<!--The modal-->
+<div class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">SUBSCRIBE</h5>
+			<span class="icon">
+						<i class="icon-mail"></i>
+			</span>
+			<button type="button" class="close red-col-hv">
+				<span ><i class="icon-cancel"></i></span>
+			</button>
+		</div>
+		<form class="modal-subscribe-form" method="POST" action="">
+			<input type="email" name="email" class="subscribe-input" placeholder="Enter email" aria-label="Enter email" required="">
+			<button class="btn alert-btn black-btn-hv" type="submit">Subscribe</button>
+		</form>
+	</div>
+</div>
+
+<!--Main content-->
+<main>
+	<div class="close-button"><a href="#" class="icon-cancel red-col-hv"></a></div>
+	
+	<div class="up-button"><a href="#" class="icon-up red-col-hv"></a></div>
+	
+	<div class="main-content">
+		<section class="about-me" id="about">
+			<h2>About Me</h2>
+			<p>Hi, there! My name is Dmitry. I'm greeting you on my website.</p>
+			<img src="img/me.jpg" alt="Sagun Dmitry photo">
+			<p class="about-me__description">I am a beginner Markup and JavaScript developer.
+				On this website, developed by me in July 2018, you can get more information about me,
+				<a href="#portfolio" class="red-col-hv">see examples of my works</a>,
+				and also <a href="#resume" class="red-col-hv">download my resume</a>.</p>
+		</section>
+		
+		<section class="my-skills" id="skills">
+			<h2>My Skills</h2>
+			<p>I'm learning front-end since summer 2017</p>
+			<div class="skills-box">
+				<div class="skill-item">
+					<span class="skill-icon icon-html5"></span>
+					<div class="skill-title">HTML5</div>
+					<div class="skill-output"><output></output> mos.</div>
+				</div>
+				
+				<div class="skill-item">
+					<span class="skill-icon icon-css"></span>
+					<div class="skill-title">CSS3</div>
+					<div class="skill-output"><output></output> mos.</div>
+				</div>
+				
+				<div class="skill-item">
+					<span class="skill-icon icon-js"></span>
+					<div class="skill-title">Javascript</div>
+					<div class="skill-output"><output></output> mos.</div>
+				</div>
+				
+				<div class="skill-item">
+					<span class="skill-icon icon-react"></span>
+					<div class="skill-title">React</div>
+					<div class="skill-output"><output></output> mos.</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="portfolio" id="portfolio">
+			<h2>My Portfolio</h2>
+			
+			<div class="portfolio-gallery">
+				<div class="portfolio-item">
+					<img src="img/portfolio/landing.jpg" alt="landing page">
+					<div class="hover-block">
+						<div class="describe">
+							<h3>Landing 07.2018</h3>
+							<p>I just trained my skill</p>
+							<a class="icon-eye" href="sites/landing/index.html" target=”_blank”></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio-item">
+					<img src="img/portfolio/e-shop.jpg" alt="E-shop page">
+					<div class="hover-block">
+						<div class="describe">
+							<h3>Mini e-shop 06.2018</h3>
+							<p>It  was created as a final work at EPAM course</p>
+							<a class="icon-eye" href="sites/e-shop/index.html" target=”_blank”></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio-item">
+					<img src="img/portfolio/sudoku.jpg" alt="Sudoku">
+					<div class="hover-block">
+						<div class="describe">
+							<h3>Sudoku 04.2018</h3>
+							<p>The program solves Sudoku puzzle</p>
+							<a class="icon-eye" href="sites/SUDOKU/index.html" target=”_blank”></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio-item">
+					<img src="img/portfolio/first.jpg" alt="My first site">
+					<div class="hover-block">
+						<div class="describe">
+							<h3>My first site) 04.2018</h3>
+							<p>The task was to create CSS for HTML that was given</p>
+							<a class="icon-eye" href="#" target=”_blank”></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="resume" id="resume">
+			<h2>My Resume</h2>
+			<div class="item">
+				<p>My resume is available for downloading. Feel free to contact me if
+					you need. Look forward to hear you.</p>
+				<img class="person-photo" src="img/avatar.png" alt="Personal photo">
+			</div>
+			<a download href="file/CV_Sagun.rtf" class="btn black-btn red-btn-hv">Download resume
+				<i class="icon-download"></i>
+			</a>
+		</section>
+		
+		<section class="contact" id="contact">
+			<h2>Contact Me</h2>
+			<p>Feel free to contact me</p>
+			<div class="contact-info">
+				<div class="contact-info-item red-col-hv">
+					<i class="contact-title icon-location"></i>
+					<a target="_blank" href="https://www.google.com.ua/maps/place/%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2,
+					+%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0
+					%B0%D1%81%D1%82%D1%8C/@49.994507,36.145742,11z/data=!3m1!4b1!4m5!3m4!1s0x4127a09f63ab0f8b
+					:0x2d4c18681aa4be0a!8m2!3d49.9935!4d36.230383?hl=ru&authuser=0">
+						Kharkiv, Ukraine</a>
+				</div>
+				
+				<div class="contact-info-item red-col-hv">
+					<i class="contact-title icon-mail"></i>
+					<a href="mailto:chief1234dima@gmail.com">chief1234dima@gmail.com</a>
+				</div>
+				
+				<div class="contact-info-item red-col-hv">
+					<i class="contact-title icon-mobile"></i>
+					<a href="tel:+380000000">+38-000-00-00</a>
+				</div>
+			</div>
+		</section>
+		
+		<div></div>
+	</div>
+	
+	<footer>
+		<p>© 07.2018</p>
+	</footer>
+</main>
+
+<script src="js/js.js?v=2"></script>
+</body>
+</html>
