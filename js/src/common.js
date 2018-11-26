@@ -1,3 +1,9 @@
+window.addEventListener('load', () => {
+  setTimeout(function(){
+    document.querySelector('.loader-box').style.display = 'none';
+  }, 500);
+});
+
 /*
  * For shorter code
  */
