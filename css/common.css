@@ -16,25 +16,67 @@
   0. Loader
 -------------------------------------------*/
 .loader-box {
+  background: none repeat scroll 0 0 #f9f9f9;
+  bottom: 0;
+  height: 100%;
+  left: 0;
   position: fixed;
-  min-height: 100%;
-  min-width: 100%;
-  background: rgb(233, 233, 233);
-  z-index: 1000;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+
+  50% { transform: rotate(180deg); }
+
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0);
+    border-top-color: #34495e;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    border-top-color: #4ec2c2;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #34495e;
+  }
 }
 
 .loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120px;
-  height: 120px;
-  margin: -60px 0 0 -60px;
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #54ad37;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
 }
+
+.loader div { height: 100%; }
+
+.loader1,.loader1 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+  animation: rotate linear 3.5s infinite;
+  border-top-color: #34495e;
+  border-bottom-color: #54ad37;
+}
+
+.loader,.loader * { will-change: transform; }
 
 /*-------------------------------------------
   1. Default Settings

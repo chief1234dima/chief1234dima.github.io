@@ -1,8 +1,14 @@
 "use strict";
 
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.querySelector('.loader-box').style.display = 'none';
+  }, 500);
+});
 /*
  * For shorter code
  */
+
 var $ = function $(elem) {
   return document.querySelector(elem);
 };
