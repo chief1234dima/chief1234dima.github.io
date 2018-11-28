@@ -712,11 +712,19 @@ footer .icon-phone:before {
 
 .social-links a {
   margin-right: 1em;
-  font-size: 1.5em;
-  color: #54ad37;
+  border-radius: 10px;
+  background-color: #54ad37;
+  box-shadow: 0 2px 4px 0 rgba(150,150,150,0.65);
+  font-size: 3.5em;
+  color: white;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.social-links a:hover { color: #3B941E; }
+.social-links a:hover {
+  background-color: #f6f6f6;
+  color: #54ad37;
+  box-shadow: none;
+}
 
 footer nav a:hover { color: #54ad37; }
 
@@ -791,14 +799,6 @@ footer nav a:hover { color: #54ad37; }
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
-/*@keyframes bottom-to-top {*/
-  /*0% { top: 50%; }*/
-  /*30% { top: 25%; }*/
-  /*90% { top: 32%; }*/
-  /*100% { top: 30%; }*/
-/*}*/
-
 
 /*-------------------------------------------
   10. Media
