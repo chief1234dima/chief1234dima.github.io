@@ -1,7 +1,13 @@
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
+//   setTimeout(function(){
+//     document.querySelector('.loader-box').style.display = 'none';
+//   }, 500);
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
   setTimeout(function(){
     document.querySelector('.loader-box').style.display = 'none';
-  }, 500);
+  }, 400);
 });
 
 /*

@@ -1,9 +1,14 @@
 "use strict";
 
-window.addEventListener('load', function () {
+// window.addEventListener('load', () => {
+//   setTimeout(function(){
+//     document.querySelector('.loader-box').style.display = 'none';
+//   }, 500);
+// });
+document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     document.querySelector('.loader-box').style.display = 'none';
-  }, 500);
+  }, 400);
 });
 /*
  * For shorter code
