@@ -1,39 +1,21 @@
 "use strict";
 
-// window.addEventListener('load', () => {
-//   setTimeout(function(){
-//     document.querySelector('.loader-box').style.display = 'none';
-//   }, 500);
-// });
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
-    document.querySelector('.loader-box').style.display = 'none';
+    $('.loader-box').style.display = 'none';
   }, 400);
 });
-/*
- * For shorter code
- */
-
-var $ = function $(elem) {
-  return document.querySelector(elem);
-};
-
 new Slider($('.slider'));
-situateStickyHeader();
-$('.nav-toggle').addEventListener('click', function () {
-  $('.nav-toggle__icon').classList.toggle('nav-toggle-close');
-  $('header .main-menu').classList.toggle('menu-open');
-});
 $('.btn-proceed').addEventListener('click', function () {
-  return smoothScroll($('.about-us'), 80);
-});
-window.addEventListener('scroll', situateStickyHeader);
-$('.btn-up').addEventListener('click', function () {
-  return smoothScroll(document.documentElement, 0);
+  if (document.documentElement.clientWidth > 767) {
+    smoothScroll($('.about-us'), 80);
+  } else {
+    smoothScroll($('.about-us'), 0);
+  }
 });
 /*--------------------------------
-*  Slider
-* -------------------------------*/
+ *  Slider
+ * -------------------------------*/
 
 /*
  * Creates new slider
@@ -41,19 +23,48 @@ $('.btn-up').addEventListener('click', function () {
 
 function Slider(elem) {
   var offset = -100;
-  /* TODO ф-ция инициализации:
-   * TODO 1) расставить data-slide-index
-   * TODO 2) добавить end & start nodes via nodeClone()
-   */
-
-  var eventFlag = true; //set handlers start
+  var eventFlag = true;
+  var shiftFlag = false;
+  var x;
+  var y; //set handlers start
 
   window.addEventListener('resize', setImgOffset);
   elem.querySelector('.prev').addEventListener('click', changeSlider);
   elem.querySelector('.next').addEventListener('click', changeSlider);
   Array.prototype.slice.call(elem.querySelectorAll('.slider-pagination button')).forEach(function (item) {
     return item.addEventListener('click', changeSlider);
-  }); //set handlers end
+  });
+  elem.addEventListener('mousedown', startChangeImfByMouse);
+  elem.addEventListener('mouseup', endChangeImfByMouse);
+  elem.addEventListener('touchstart', startChangeImfByTouch, {
+    passive: false
+  });
+  elem.addEventListener('touchend', endChangeImfByTouch); //set handlers end
+
+  function startChangeImfByMouse(e) {
+    shiftFlag = true;
+    x = e.clientX;
+  }
+
+  function endChangeImfByMouse(e) {
+    if (Math.abs(e.clientX - x) < 50) return false;
+    var direction = e.clientX > x ? '+100' : '-100';
+    shiftFlag = false;
+    shiftSlider(direction);
+  }
+
+  function startChangeImfByTouch(e) {
+    shiftFlag = true;
+    x = e.touches[0].clientX;
+    y = e.touches[0].clientY;
+  }
+
+  function endChangeImfByTouch(e) {
+    if (Math.abs(e.changedTouches[0].clientX - x) < Math.abs(e.changedTouches[0].clientY - y) || Math.abs(e.changedTouches[0].clientX - x) < 50) return false;
+    var direction = e.changedTouches[0].clientX > x ? '+100' : '-100';
+    shiftFlag = false;
+    shiftSlider(direction);
+  }
 
   setImgOffset();
   /**
@@ -149,6 +160,103 @@ function Slider(elem) {
   }
 }
 /*--------------------------------
+ *  Comments
+ * -------------------------------*/
+
+
+(function () {
+  var comments = [{
+    text: 'Хочу выразить слова благодарности Анастасии Олеговне и Софии Владимировне ' + 'за ту теплую, дружелюбную и уютную атмосферу, которую они создают во время занятий...',
+    author: 'Галина Олейник'
+  }, {
+    text: 'Дорогие девочки! Спасибо за вашу любовь, заботу и очень тяжелый труд! Вы помогаете ' + 'не только детишкам, но и родителям поверить в лучшее, и обрести надежду...',
+    author: 'Інга Браславська'
+  }, {
+    text: 'Дякую за тренінг "Стоп незнайомець!". Сподобалась організація, діти всі дві години були зацікавлені ' + 'та залучені. Успіхів! Робіть ще щось цікаве та корисне.',
+    author: 'Dariya Venzel'
+  }, {
+    text: 'Уже несколько лет занимаемся со специалистами этого центра. Очень довольны результатами. Особая благодарность ' + 'Анастасии Олеговне!!! Всем рекомендую.',
+    author: 'Алена Косолапова'
+  }];
+  $('.comment__text').innerHTML = "\"".concat(comments[comments.length - 1].text, "\"");
+  $('.comment__author').innerHTML = comments[comments.length - 1].author;
+  $('.comments .prev').addEventListener('click', changeCommentByArrow);
+  $('.comments .next').addEventListener('click', changeCommentByArrow);
+
+  (function () {
+    var elem = $('.comments');
+    var shiftFlag = false;
+    var x;
+    var y;
+
+    elem.ondragstart = function () {
+      return false;
+    };
+
+    elem.addEventListener('mousedown', startChangeImfByMouse);
+    elem.addEventListener('mouseup', endChangeImfByMouse);
+    elem.addEventListener('touchstart', startChangeImfByTouch, {
+      passive: false
+    });
+    elem.addEventListener('touchend', endChangeImfByTouch);
+
+    function startChangeImfByMouse(e) {
+      shiftFlag = true;
+      x = e.clientX;
+    }
+
+    function endChangeImfByMouse(e) {
+      if (Math.abs(e.clientX - x) < 50) return false;
+      var direction = e.clientX > x ? -1 : 1;
+      shiftFlag = false;
+      changeComment(direction);
+    }
+
+    function startChangeImfByTouch(e) {
+      shiftFlag = true;
+      x = e.touches[0].clientX;
+      y = e.touches[0].clientY;
+    }
+
+    function endChangeImfByTouch(e) {
+      if (Math.abs(e.changedTouches[0].clientX - x) < Math.abs(e.changedTouches[0].clientY - y) || Math.abs(e.changedTouches[0].clientX - x) < 50) return false;
+      var direction = e.changedTouches[0].clientX > x ? -1 : 1;
+      shiftFlag = false;
+      changeComment(direction);
+    }
+  })();
+
+  function changeCommentByArrow(e) {
+    var direction = e.target.classList.contains('next') ? 1 : -1;
+    changeComment(direction);
+  }
+
+  function changeComment(direction) {
+    var commentText = $('.comment__text');
+    var text;
+    var author;
+
+    if (direction > 0) {
+      var _comments$ = comments[0];
+      text = _comments$.text;
+      author = _comments$.author;
+      comments.push(comments.shift());
+    } else {
+      comments.unshift(comments.pop());
+      var _comments = comments[comments.length - 1];
+      text = _comments.text;
+      author = _comments.author;
+    }
+
+    commentText.innerHTML = "\"".concat(text, "\"");
+    $('.comment__author').innerHTML = author;
+    commentText.classList.add('fade-in');
+    setTimeout(function () {
+      commentText.classList.remove('fade-in');
+    }, 300);
+  }
+})();
+/*--------------------------------
  *  Animation
  * -------------------------------*/
 
@@ -167,106 +275,5 @@ function Slider(elem) {
       }
     });
     if (list.length === 0) window.removeEventListener('scroll', addAnimation);
-  }
-})();
-
-function smoothScroll(elem, offset) {
-  var coordY, timer, shift;
-  scroll();
-
-  function scroll() {
-    coordY = elem.getBoundingClientRect().top - offset;
-    shift = coordY > 0 ? 30 : -30;
-
-    if (coordY !== 0) {
-      if (coordY > 0 && document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-        return false;
-      }
-
-      if (coordY > 30 || coordY < -30) {
-        window.scrollBy(0, shift);
-        timer = setTimeout(scroll, 15);
-      } else {
-        window.scrollBy(0, coordY);
-        clearTimeout(timer);
-        return false;
-      }
-    }
-  }
-}
-
-function situateStickyHeader() {
-  if (document.documentElement.clientWidth < 768) return false;
-
-  if (document.documentElement.scrollTop >= 200) {
-    $('header').classList.add('sticky-header');
-    $('.btn-up').classList.add('is-active');
-  } else {
-    $('header').classList.remove('sticky-header');
-    $('.btn-up').classList.remove('is-active');
-  }
-}
-/*
- * Layout maintenance
- */
-
-
-window.addEventListener('resize', function () {
-  var menu = $('header .main-menu');
-
-  if (menu.classList.contains('menu-open') && document.documentElement.clientWidth > 767) {
-    menu.classList.remove('menu-open');
-    $('.nav-toggle__icon').classList.toggle('nav-toggle-close');
-  } // if (menu.classList.contains('menu-hide')
-  //   && window.innerWidth > 767) {
-  //   menu.classList.remove('menu-hide');
-  // }
-
-});
-/*--------------------------------
- *  Comments
- * -------------------------------*/
-
-(function () {
-  var comments = [{
-    text: 'Хочу выразить слова благодарности Анастасии Олеговне и Софии Владимировне ' + 'за ту теплую, дружелюбную и уютную атмосферу, которую они создают во время занятий...',
-    author: 'Галина Олейник'
-  }, {
-    text: 'Дорогие девочки! Спасибо за вашу любовь, заботу и очень тяжелый труд! Вы помогаете ' + 'не только детишкам, но и родителям поверить в лучшее, и обрести надежду...',
-    author: 'Інга Браславська'
-  }, {
-    text: 'Дякую за тренінг "Стоп незнайомець!". Сподобалась організація, діти всі дві години були зацікавлені ' + 'та залучені. Успіхів! Робіть ще щось цікаве та корисне.',
-    author: 'Dariya Venzel'
-  }, {
-    text: 'Уже несколько лет занимаемся со специалистами этого центра. Очень довольны результатами. Особая благодарность ' + 'Анастасии Олеговне!!! Всем рекомендую.',
-    author: 'Алена Косолапова'
-  }];
-  $('.comment__text').innerHTML = "\"".concat(comments[comments.length - 1].text, "\"");
-  $('.comment__author').innerHTML = comments[comments.length - 1].author;
-  $('.comments .prev').addEventListener('click', changeComment);
-  $('.comments .next').addEventListener('click', changeComment);
-
-  function changeComment(e) {
-    var text, author;
-    var commentText = $('.comment__text');
-
-    if (e.target.classList.contains('next')) {
-      var _comments$ = comments[0];
-      text = _comments$.text;
-      author = _comments$.author;
-      comments.push(comments.shift());
-    } else {
-      comments.unshift(comments.pop());
-      var _comments = comments[comments.length - 1];
-      text = _comments.text;
-      author = _comments.author;
-    }
-
-    commentText.innerHTML = "\"".concat(text, "\"");
-    $('.comment__author').innerHTML = author;
-    commentText.classList.add('fade-in');
-    setTimeout(function () {
-      commentText.classList.remove('fade-in');
-    }, 300);
   }
 })();

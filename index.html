@@ -6,14 +6,15 @@
 	<meta name="description" content="Наш центр - это команда профессионалов, знающих и любящих свое дело.
 		Мы заботимся о каждом клиенте, приходящем в наш центр.
 		Прикладываем максимум усилий для того что бы наши клиенты были довольны сделанным выбором.">
-	<title>Start center</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="stylesheet" href="css/normalize.css">
+	<title>Центр психологии и логопедии СТАРТ</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/fontello-embedded.css?v=3">
-	<link rel="stylesheet" href="css/common.css?v=1.04">
+	<link rel="stylesheet" href="assets/css/fontello-embedded.css?v=3">
+	<link rel="stylesheet" href="assets/css/common.css?v=1.04">
+	<link rel="stylesheet" href="assets/css/start.css?v=1.00">
 </head>
 <body>
 <div class="loader-box">
@@ -32,12 +33,13 @@
 	</div>
 </div>
 
-<header class="">
-	<div class="wrap layout-center">
+<header>
+	<div class="wrap layout-center white-text">
 		<a class="logo" href="index.html">
-			<img src="img/logo.png" alt="Центр психологии и логопедии СТАРТ" width="50" height="50">
+			<img src="assets/img/logo.png" alt="Центр психологии и логопедии СТАРТ" width="50" height="50">
+			<div class="logo__title"><span>Центр</span> Старт</div>
 		</a>
-	
+		
 		<button class="nav-toggle">
 			<span class="nav-toggle__icon">
 				<span class="bar1"></span>
@@ -45,15 +47,15 @@
 				<span class="bar3"></span>
 			</span>
 		</button>
-	
+		
 		<nav class="main-menu">
 			<ul>
-				<li><a href="#" class="slow-underscore active">Домой</a></li>
-				<li><a href="#" class="slow-underscore">О нас</a></li>
-				<li><a href="#" class="slow-underscore">Услуги</a></li>
-				<li><a href="#" class="slow-underscore">Галерея</a></li>
-				<li><a href="#" class="slow-underscore">Команда</a></li>
-				<li><a href="#" class="slow-underscore">Контакты</a></li>
+				<li><a href="index.html" class="slow-underscore active">Домой</a></li>
+				<li><a href="pages/about_us.html" class="slow-underscore">О нас</a></li>
+				<li><a href="pages/services/services.html" class="slow-underscore">Услуги</a></li>
+				<li><a href="pages/gallery.html" class="slow-underscore">Галерея</a></li>
+				<li><a href="pages/staff.html" class="slow-underscore">Команда</a></li>
+				<li><a href="pages/contacts.html" class="slow-underscore">Контакты</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -73,28 +75,28 @@
 				<div class="item__content">
 					<h1 class="item__title">Центр СТАРТ</h1>
 					<p class="item__text">Наш центр - это команда профессионалов, знающих и любящих свое дело</p>
-					<button class="btn-default">узнать больше</button>
+					<a href="pages/about_us.html" class="btn-default">узнать больше</a>
 				</div>
 			</div><!--
 	 --><div class="slider-item" data-slide-index="2">
 				<div class="item__content">
 					<p class="item__title">Мы заботимся о каждом Клиенте, приходящем в наш центр</p>
 					<p class="item__text">Узнать больше о наших услугах</p>
-					<button class="btn-default">сервисы</button>
+					<a href="pages/services/services.html" class="btn-default">сервисы</a>
 				</div>
 			</div><!--
 			--><div class="slider-item" data-slide-index="3">
-			<div class="item__content">
-				<p class="item__title">Узнайте о приближающихся мероприятиях</p>
-				<p class="item__text">Мы ежемесячно организуем семинары и курсы</p>
-				<button class="btn-default">узнать больше</button>
-			</div>
-		</div><!--
+				<div class="item__content">
+					<p class="item__title">Узнайте о приближающихся мероприятиях</p>
+					<p class="item__text">Мы ежемесячно организуем семинары и курсы</p>
+					<a href="pages/services/handwriting.html" class="btn-default">узнать больше</a>
+				</div>
+			</div><!--
 	 --><div class="slider-item" data-slide-index="4">
 				<div class="item__content">
 					<p class="item__title">А у тебя есть решительность и сердце, чтобы стать частью нашей команды?</p>
 					<p class="item__text">Наши специалисты находят подход к каждому ребенку</p>
-					<button class="btn-default">наша команда</button>
+					<a href="pages/staff.html" class="btn-default">наша команда</a>
 				</div>
 			</div><!--
 	 --><div class="slider-item slide-clone" data-slide-index="end">
@@ -111,7 +113,7 @@
 	</div>
 	
 	<button class="btn-proceed icon-down-open"></button>
-	
+
 </div>
 
 <section class="about-us">
@@ -120,7 +122,7 @@
 	</div>
 	<div class="about-us__desc layout-center">
 		<div class="img-block align-right">
-			<img data-animate="left-to-right" src="img/about-us/1.jpg" alt="Ребенок занимается с логопедом">
+			<img data-animate="left-to-right" src="assets/img/about-us/1.jpg" alt="Ребенок занимается с логопедом">
 		</div>
 		<div class="text-block align-left">
 			<p>Наши опытные логопеды помогут вам в решении речевых сложностей у детей:</p>
@@ -132,29 +134,31 @@
 		</div>
 		<div class="text-block align-right">
 			<p>Детский психолог - это специалист, который знает все об онтогенезе ребенка с момента рождения.
-				После того как малыш появился на свет, он проходит разные этапы развития: речевого, двигательного, познавательного, эмоционального, психологического.</p>
+				После того как малыш появился на свет, он проходит разные этапы развития: речевого, двигательного,
+				познавательного, эмоционального, психологического.</p>
 		</div>
 		<div class="img-block align-left">
-			<img data-animate="right-to-left" src="img/about-us/2.jpg" alt="Ребенок">
+			<img data-animate="right-to-left" src="assets/img/about-us/2.jpg" alt="Ребенок">
 		</div>
 		<div class="img-block align-right">
-			<img data-animate="left-to-right" src="img/about-us/3.jpg" alt="Ребенок занимается с психологом">
+			<img data-animate="left-to-right" src="assets/img/about-us/3.jpg" alt="Ребенок занимается с психологом">
 		</div>
 		<div class="text-block align-left">
-			<p>Нейропсихологическая помощь является одним из эффективных способов помочь ребенку решить ряд проблем, среди которых:</p>
-				<ul>
-					<li>Повышенная утомляемость</li>
-					<li>Снижение концентрации внимания</li>
-					<li>Нарушения мыслительного процесса</li>
-					<li>Расторможенность</li>
-					<li>Снижение памяти</li>
-					<li>Нарушения в развитии речи</li>
-					<li>Несформированность...</li>
-				</ul>
+			<p>Нейропсихологическая помощь является одним из эффективных способов помочь ребенку решить ряд проблем, среди
+				которых:</p>
+			<ul>
+				<li>Повышенная утомляемость</li>
+				<li>Снижение концентрации внимания</li>
+				<li>Нарушения мыслительного процесса</li>
+				<li>Расторможенность</li>
+				<li>Снижение памяти</li>
+				<li>Нарушения в развитии речи</li>
+				<li>Несформированность...</li>
+			</ul>
 		</div>
 	</div>
 	
-	<button class="btn-default">узнать больше</button>
+	<a href="pages/about_us.html" class="btn-default">узнать больше</a>
 </section>
 
 <section class="services">
@@ -168,7 +172,7 @@
 			<figcaption><h2>Индивидуальные занятия</h2></figcaption>
 		</figure>
 		<p class="item__desc">Для каждого клиента мы подбираем индивидуальную программу</p>
-		<button class="item__btn">узнать больше</button>
+		<a href="pages/services/services.html" class="item__btn">узнать больше</a>
 	</div>
 	
 	<div class="service-item diff-color">
@@ -179,7 +183,7 @@
 			<figcaption><h2>Групповые занятия</h2></figcaption>
 		</figure>
 		<p class="item__desc">Как показала практика вместе не только веселее, а еще и эффективнее</p>
-		<button class="item__btn">узнать больше</button>
+		<a href="pages/services/therapist.html" class="item__btn">узнать больше</a>
 	</div>
 	
 	<div class="service-item">
@@ -198,43 +202,45 @@
 			<figcaption><h2>Школа / садик</h2></figcaption>
 		</figure>
 		<p class="item__desc">Группы полного и неполного дня</p>
-		<button class="item__btn">узнать больше</button>
+		<a href="pages/services/kindergarten.html" class="item__btn">узнать больше</a>
 	</div>
 </section>
 
 <section class="comments">
 	<div class="comments__wrap layout-center">
 		<h2>Добрые слова о людях с сердцем</h2>
-			<div class="comment">
-				<p class="comment__text">Уже несколько лет занимаемся со специалистами этого центра. Очень довольны результатами. Особая благодарность ' +
-					'Анастасии Олеговне!!! Всем рекомендую.</p>
-				<div class="comment__author">Алена Косолапова</div>
-			</div>
+		<div class="comment">
+			<p class="comment__text">Уже несколько лет занимаемся со специалистами этого центра. Очень довольны результатами.
+				Особая благодарность Анастасии Олеговне!!! Всем рекомендую.</p>
+			<div class="comment__author">Алена Косолапова</div>
+		</div>
 		<button class="prev icon-left-open"></button>
 		<button class="next icon-right-open"></button>
-		<a class="btn-default" href="https://m.facebook.com/pg/logoped.start/reviews/">
+		<a class="btn-default" target="_blank" href="https://m.facebook.com/pg/logoped.start/reviews/">
 			больше отзывов на <span class="icon-facebook-circled"></span></a>
 	</div>
 </section>
 
 <div class="career-wrap">
 	<p>А у тебя есть решительность и сердце, чтобы присоединиться к нашей Команде?</p>
-	<a href="#" class="btn">наша команда</a>
+	<a href="pages/staff.html" class="btn">наша команда</a>
 </div>
 
 <footer>
 	<div class="wrap layout-center">
-		<img class="logo" src="img/logo_footer.png" alt="Центр психологии и логопедии СТАРТ">
+		<img class="logo" src="assets/img/logo_footer.png" alt="Центр психологии и логопедии СТАРТ">
 		<div class="column">
 			<div class="column__title">Детский Центр "Старт"</div>
-			<ul>
-				<li>Логопед и психолог</li>
-				<li>Логопедическая группа</li>
-				<li>Нейропсихолог</li>
-				<li>Мини садик</li>
-			</ul>
+			<nav>
+				<ul>
+					<li><a href="pages/services/psychologist.html">Логопед и психолог</a></li>
+					<li><a href="pages/services/therapist.html">Логопедическая группа</a></li>
+					<li><a href="pages/services/neuropsychologist.html">Нейропсихолог</a></li>
+					<li><a href="pages/services/kindergarten.html">Мини садик</a></li>
+				</ul>
+			</nav>
 		</div>
-			
+		
 		<div class="column">
 			<div class="column__title">Контакты</div>
 			<ul>
@@ -243,28 +249,26 @@
 					0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+61000/@49.9859189,36.
 					2475836,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4127a08de2c1bcdb:0x1963aa7eb1c2b577!2m2!1d36.251961!2d49.985919
 					?hl=ru">Харьков, ул. Шота Руставели, 28</a></li>
-					<!--TODO + часы приема-->
-					
+				
 				<li><a class="btn-success icon-phone" href="tel:+380666355834">066-635-58-34</a></li>
 				<li><a class="btn-success icon-phone" href="tel:+380937065995">093-706-59-95</a></li>
 				<li class="social-links">
-					<a class="icon-facebook" href="https://m.facebook.com/logoped.start"></a>
-					<a class="icon-instagram" href="https://www.instagram.com/centrstart"></a>
+					<a class="icon-facebook" href="https://m.facebook.com/logoped.start" target="_blank"></a>
+					<a class="icon-instagram" href="https://www.instagram.com/centrstart" target="_blank"></a>
 				</li>
 			</ul>
-					<!--TODO кнопки социальные кнопки-->
 		</div>
-			
+		
 		<div class="column">
 			<div class="column__title">Ссылки</div>
 			<nav>
 				<ul>
-					<li><a href="#" class="">Домой</a></li>
-					<li><a href="#" class="">О нас</a></li>
-					<li><a href="#" class="">Услуги</a></li>
-					<li><a href="#" class="">Галерея</a></li>
-					<li><a href="#" class="">Команда</a></li>
-					<li><a href="#" class="">Контакты</a></li>
+					<li><a href="index.html">Домой</a></li>
+					<li><a href="pages/about_us.html">О нас</a></li>
+					<li><a href="pages/services/services.html">Услуги</a></li>
+					<li><a href="pages/gallery.html">Галерея</a></li>
+					<li><a href="pages/staff.html">Команда</a></li>
+					<li><a href="pages/contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -278,9 +282,10 @@
 	</div>
 </footer>
 
+<script src="assets/js/src/common.js?v=2.41"></script>
+<script src="assets/js/src/start.js?v=1.11"></script>
 
-<script src="js/src/common.js?v=2.27"></script>
-
-<!--<script src="js/dist/common.js?v=2.27"></script>-->
+<!--<script src="assets/js/dist/common.js?v=2.43"></script>-->
+<!--<script src="assets/js/dist/start.js?v=2.28"></script>-->
 </body>
 </html>

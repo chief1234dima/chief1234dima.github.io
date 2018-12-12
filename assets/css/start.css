@@ -1,19 +1,25 @@
 /*-------Start Content Table-----------
 
 	1. Default Settings
-	2. Buttons
-	3. Header
-	4. Slider
-	5. About Us Section
-	5. Footer
-	6. Promo blocks
-	7. Animation
-	8. Media
+	2. Loader
+	3. Slider
+	4. About Us Section
+	5. Services
+	6. Comments Section
+	7. Media
 
 	----------End Content Table----------*/
 
 /*-------------------------------------------
-  0. Loader
+  1. Default Settings
+-------------------------------------------*/
+body {
+  background: url('../img/p3.jpg') fixed top no-repeat;
+  background-size: cover;
+}
+
+/*-------------------------------------------
+  2. Loader
 -------------------------------------------*/
 .loader-box {
   background: none repeat scroll 0 0 #f9f9f9;
@@ -79,229 +85,7 @@
 .loader,.loader * { will-change: transform; }
 
 /*-------------------------------------------
-  1. Default Settings
--------------------------------------------*/
-* { box-sizing: border-box; }
-
-html {
-  color: black;
-  font: normal 16px/1.2 'Roboto', sans-serif;
-}
-
-body {
-  background: url('../img/p3.jpg') fixed top no-repeat;
-  background-size: cover;
-}
-
-.layout-center {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-a {
-  font-family: 'Open Sans', sans-serif;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-/*-------------------------------------------
-  2. Buttons
--------------------------------------------*/
-button {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  color: inherit;
-  transition: color 0.2s, background-color 0.2s;
-}
-
-.btn-default {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  max-width: 21.25rem;
-  height: 4.5rem;
-  margin: 0 auto;
-  font-weight: bold;
-  font-size: 0.7em;
-  text-transform: uppercase;
-  border: 2px solid rgb(229, 229, 229);
-  transition: color 0.4s, border 0.4s;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-  color: #54ad37;
-  border-color: #54ad37;
-}
-
-.btn-up {
-  position: fixed;
-  bottom: 15px;
-  right: -60px;
-  display: block;
-  width: 45px;
-  height: 45px;
-  opacity: 0;
-  background-color: rgba(0,0,0,.2);
-  text-align: center;
-  color: white;
-  transition: all .2s ease-in-out;
-}
-
-.btn-up.is-active {
-  right: 15px;
-  opacity: 1;
-}
-
-.btn-up:hover { background-color: rgba(0, 0, 0, 0.3); }
-
-.btn-success {
-  position: relative;
-  display: inline-block;
-  padding: 15px 20px 13px 20px;;
-  border-radius: 50px;
-  background: #54ad37;
-  box-shadow: 0 2px 4px 0 rgba(150,150,150,0.65);
-  text-align: center;
-  color: white;
-  transition: 0.2s;
-}
-
-.btn-success:hover {
-  background: #3B941E;
-  box-shadow: none;
-}
-
-.slow-underscore {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
-  overflow: hidden;
-}
-
-.slow-underscore::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  z-index: 10;
-  background-color: transparent;
-  border-bottom: 2px solid white;
-  transform: translateX(-101%); /*other tricks don't work well in IE*/
-  transition: transform 0.4s;
-  overflow: hidden;
-}
-
-.slow-underscore:hover::before,
-.slow-underscore.active::before { transform: none; }
-
-/*-------------------------------------------
-  3. Header
--------------------------------------------*/
-header .wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: white;
-}
-
-.logo { margin: 0.5em 0; }
-
-.main-menu { display: none; }
-
-.sticky-header {
-  position: fixed;
-  width: 100%;
-  height: 0;
-  z-index: 1000;
-  background: white;
-  animation-name: to-full-height;
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-}
-
-.sticky-header .wrap {
-  height: 100%;
-  color: black;
-}
-
-.sticky-header .slow-underscore::before { border-color: #54ad37; }
-
-/*-----4.1 Start Nav Toggle-----*/
-.nav-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  margin-left: auto;
-  margin-right: -1.25em;
-  padding: 0 1.5rem;
-}
-
-.nav-toggle span { display: block; }
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 14px;
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  margin: 3px 0;
-  transition: transform 0.4s;
-}
-
-.nav-toggle-close .bar1 {
-  transform: rotate(-45deg) translate(-5px, 2px);
-  background: rgb(241, 74, 88);
-}
-
-.nav-toggle-close .bar2 {opacity: 0;}
-
-.nav-toggle-close .bar3 {
-  transform: rotate(45deg) translate(-5px, -3px);
-  background: rgb(241, 74, 88);
-}
-/*------4.1 End Nav Toggle-----*/
-
-.menu-open {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100% - 70px);
-  padding: 1.5rem;
-  font-size: 1.5em;
-  font-weight: bold;
-  line-height: 2.5;
-  background: white;
-  animation: menu-show 0.5s linear;
-}
-
-/*-------------------------------------------
-  4. Slider
+  3. Slider
 -------------------------------------------*/
 .slider {
   position: relative;
@@ -343,17 +127,17 @@ header .wrap {
 
 .slider-item[data-slide-index="1"],
 .slider-item[data-slide-index="end"]
-  { background-image: url("../img/slider/about-us.jpg"); }
+{ background-image: url("../img/slider/about-us.jpg"); }
 
 .slider-item[data-slide-index="2"]
-  { background-image: url("../img/slider/Website-Slider.1920x1080-2.jpg"); }
+{ background-image: url("../img/slider/Website-Slider.1920x1080-2.jpg"); }
 
 .slider-item[data-slide-index="3"]
 { background-image: url("../img/slider/Website-Slider.1920x1080-1.jpg"); }
 
 .slider-item[data-slide-index="4"],
 .slider-item[data-slide-index="start"]
-  { background-image: url("../img/slider/Website-Slider-recruit.1920x1080-1.jpg"); }
+{ background-image: url("../img/slider/Website-Slider-recruit.1920x1080-1.jpg"); }
 
 .slider-pagination {
   position: absolute;
@@ -409,24 +193,8 @@ header .wrap {
 
 .item__content button { animation-delay: 0.3s; }
 
-.btn-proceed {
-  position: absolute;
-  bottom: 8%;
-  left: 50%;
-  padding: 1em;
-  border: 2px solid white;
-  border-radius: 50%;
-  font-size: 0.5em;
-  color: white;
-  transform: translateX(-50%);
-}
-
-.btn-proceed::before { transition: transform 0.2s; }
-
-.btn-proceed:hover::before { transform: translateY(30%); }
-
 /*-------------------------------------------
-  5. About Us Section
+  4. About Us Section
 -------------------------------------------*/
 .about-us {
   text-align: center;
@@ -484,7 +252,7 @@ header .wrap {
 }
 
 /*-------------------------------------------
-  6. Services
+  5. Services
 -------------------------------------------*/
 .services {
   height: 600px;
@@ -525,7 +293,6 @@ header .wrap {
   text-transform: uppercase;
   transform: translateY(-50%);
   transition: 0.3s;
-  /*animation-fill-mode: forwards;*/
 }
 
 .service-item figcaption {
@@ -560,20 +327,21 @@ header .wrap {
   transition: 0.4s;
 }
 
-.service-item button {
+.service-item .item__btn {
   position: absolute;
   top: 120%;
   left: 50%;
   padding: 1em 1.5em;
-  transform: translateX(-50%);
   border: 2px solid white;
+  text-transform: uppercase;
   overflow: hidden;
+  transform: translateX(-50%);
   transition: 0.3s;
 }
 
-.diff-color button { border-color: black; }
+.diff-color .item__btn { border-color: black; }
 
-.service-item button::after {
+.service-item .item__btn::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -591,11 +359,11 @@ header .wrap {
 
 .service-item:hover p { top: 60%; }
 
-.service-item:hover button { top: 80%; }
+.service-item:hover .item__btn { top: 80%; }
 
-.service-item button:hover { color: black; }
+.service-item .item__btn:hover { color: black; }
 
-.service-item button:hover::after {
+.service-item .item__btn:hover::after {
   width: 100%;
   height: 4000%;
   opacity: 1;
@@ -614,7 +382,7 @@ header .wrap {
 /**--------temp end----------**/
 
 /*-------------------------------------------
-  7. Comments Section
+  6. Comments Section
 -------------------------------------------*/
 .comments {
   position: relative;
@@ -623,7 +391,6 @@ header .wrap {
   text-align: center;
   color: white;
   clear: both;
-
 }
 
 .comments h2 { text-transform: uppercase; }
@@ -659,6 +426,8 @@ header .wrap {
   text-transform: uppercase;
 }
 
+.career-wrap p { max-width: 100%; }
+
 .career-wrap .btn {
   margin-top: 1em;
   padding: 1em 1.5em;
@@ -669,186 +438,21 @@ header .wrap {
 .career-wrap .btn:hover { background-color: #4f4f4f; }
 
 /*-------------------------------------------
-  8. Footer
--------------------------------------------*/
-footer {
-  background-color: #f6f6f6;
-}
-
-footer .wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-footer .logo {
-  width: 200px;
-  height: 246px;
-  margin: 1em auto;
-}
-
-.column {
-  margin: 1.5em 0;
-}
-
-footer .icon-phone {
-  width: 291px;
-  max-width: 100%;
-}
-
-footer .icon-phone:before {
-  position: absolute;
-  left: 1em;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.column__title {
-  margin-bottom: 1em;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: grey;
-}
-
-.column li { margin-bottom: 1em; }
-
-.social-links a {
-  margin-right: 1em;
-  border-radius: 10px;
-  background-color: #54ad37;
-  box-shadow: 0 2px 4px 0 rgba(150,150,150,0.65);
-  font-size: 3.5em;
-  color: white;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.social-links a:hover {
-  background-color: #f6f6f6;
-  color: #54ad37;
-  box-shadow: none;
-}
-
-footer nav a:hover { color: #54ad37; }
-
-.copyright { background: rgba(0,0,0,0.12); }
-
-.copyright .wrap {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: 0.8em;
-}
-
-/*-------------------------------------------
- 9. Animation
--------------------------------------------*/
-.fade-in { animation: fadeIn 0.3s; }
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes menu-show {
-  0% {
-    left: -50rem;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes left-to-right {
-  0% {
-    transform: translate(-50%,0);
-    opacity: 0
-  }
-  100% {
-    transform: translate(0,0);
-    opacity: 1
-  }
-}
-
-@keyframes right-to-left {
-  0% {
-    transform: translate(50%,0);
-    opacity: 0
-  }
-  100% {
-    transform: translate(0,0);
-    opacity: 1
-  }
-}
-
-@keyframes slider-scale {
-  0% {
-    transform: scale(1.3);
-    opacity: .1
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1
-  }
-}
-
-@keyframes to-full-height {
-  0% { height: 0; }
-  100% { height: 5rem; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/*-------------------------------------------
-  10. Media
+  7. Media
 -------------------------------------------*/
 @media (min-width: 768px) {
-  .layout-center { padding: 0 5%; }
-
-  header .wrap {
-    background-color: transparent;
-    font-size: 1.2rem;
-    color: white;
-  }
-
-  .nav-toggle { display: none; }
-
-  .main-menu {
-    display: block;
-    flex: 1;
-  }
-
-  .main-menu ul {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 7em;
-  }
-
   .slider { font-size: 1.5rem; }
 
-  .about-us__desc > div {
-    flex-basis: 44%;
-  }
+  .about-us__desc > div { flex-basis: 44%; }
 
   .text-block * { max-width: 90%; }
 
   .service-item { width: 33.333333%; }
 
   .comments button { font-size: 1.5em; }
-
-  .copyright .wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 @media (min-width: 1024px) {
-  .layout-center { margin: 0 auto; }
-
   .slider { font-size: 2rem; }
 
   .item__content {  padding: 0 15%; }
@@ -871,8 +475,4 @@ footer nav a:hover { color: #54ad37; }
   }
 
   .career-wrap .btn { margin: 0 0 0 1em; }
-}
-
-@media (min-width: 1300px) {
-  .layout-center { padding: 0; }
 }
