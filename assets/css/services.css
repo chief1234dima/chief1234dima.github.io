@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 15px;
   left: 15px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 45px;
@@ -238,7 +238,7 @@ aside img {
 
   .next { font-size: 2em; }
 
-
+  .btn-back { display: flex; }
 }
 
 @media (min-width: 1180px) {
