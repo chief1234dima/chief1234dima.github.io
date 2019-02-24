@@ -145,10 +145,10 @@ Services_EventBus__WEBPACK_IMPORTED_MODULE_2__["EventBus"].CHANGE_PAGE.attach(ch
 function situateStickyHeader() {
   if (document.documentElement.scrollTop >= 50) {
     document.querySelector('.bg-wrapper').classList.add('bg-wrapper--header_sticky');
-    document.body.style.backgroundColor = 'white';
+    document.querySelector('.bg-wrapper').style.backgroundColor = 'white';
   } else {
     document.querySelector('.bg-wrapper').classList.remove('bg-wrapper--header_sticky');
-    document.body.style.backgroundColor = '';
+   document.querySelector('.bg-wrapper').style.backgroundColor = '';
   }
 }
 
