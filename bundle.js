@@ -139,7 +139,7 @@ if (!document.querySelector('.header')) {
 }
 
 situateStickyHeader();
-window.addEventListener('scroll', situateStickyHeader);
+document.addEventListener('scroll', situateStickyHeader);
 Services_EventBus__WEBPACK_IMPORTED_MODULE_2__["EventBus"].CHANGE_PAGE.attach(changeActiveButton);
 
 function situateStickyHeader() {
