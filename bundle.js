@@ -139,16 +139,14 @@ if (!document.querySelector('.header')) {
 }
 
 situateStickyHeader();
-document.addEventListener('scroll', situateStickyHeader);
+window.addEventListener('scroll', situateStickyHeader);
 Services_EventBus__WEBPACK_IMPORTED_MODULE_2__["EventBus"].CHANGE_PAGE.attach(changeActiveButton);
 
 function situateStickyHeader() {
   if (document.documentElement.scrollTop >= 50 || window.pageYOffset >= 50) {
     document.querySelector('.bg-wrapper').classList.add('bg-wrapper--header_sticky');
-    document.querySelector('.bg-wrapper').style.backgroundColor = 'white';
   } else {
     document.querySelector('.bg-wrapper').classList.remove('bg-wrapper--header_sticky');
-   document.querySelector('.bg-wrapper').style.backgroundColor = '';
   }
 }
 

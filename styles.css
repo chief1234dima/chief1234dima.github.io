@@ -502,12 +502,12 @@ button:focus {
 h1 {
   display: inline-flex;
   align-items: center;
-  font: bold 28px/1 "Roboto", sans-serif;
+  font: bold 1.75rem/1 "Roboto", sans-serif;
   color: #ffffff;
 }
 @media (max-width: 1280px) {
   h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 h1 button {
@@ -516,22 +516,37 @@ h1 button {
 }
 @media (max-width: 768px) {
   h1 button {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 768px) {
   .page__title {
     position: absolute;
-    top: 56px;
+    top: 3.5rem;
     left: 3.9%;
   }
 }
 .subtitle {
-  font: normal 17px/1 "Roboto", sans-serif;
+  font: normal 1.0625rem/1 "Roboto", sans-serif;
+}
+@media (max-width: 1280px) {
+  .subtitle {
+    font-size: 1.3125rem;
+  }
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.1875rem;
+  }
 }
 .btn {
-  font: bold 18px/2.38 "PT Sans", sans-serif;
+  font: bold 1.125rem/2.38 "PT Sans", sans-serif;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.40625rem;
+  }
 }
 /*----------------------------------
   2. States
@@ -633,7 +648,7 @@ h1 button {
   z-index: 2;
   display: none;
   padding: 9px 14px;
-  font: bold 12px/1 "Roboto", sans-serif;
+  font: bold 0.75rem/1 "Roboto", sans-serif;
   color: #3c5162;
   white-space: nowrap;
   background-color: #dbeaf5;
@@ -739,6 +754,11 @@ h1 button {
 .timer {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  .timer .timer__title {
+    font-size: 1.875rem;
+  }
+}
 .timer .timer__desc {
   margin: 28px auto 36px;
 }
@@ -764,7 +784,7 @@ h1 button {
 .add-pomodoro {
   display: none;
   margin-left: 4px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: #8da5b8;
 }
 .timer__estimation.max-pom .add-pomodoro {
@@ -803,7 +823,7 @@ h1 button {
   align-items: center;
   width: 125px;
   height: 150px;
-  font: normal 24px/1.5 "Roboto", sans-serif;
+  font: normal 1.5rem/1.5 "Roboto", sans-serif;
   transform: translate(-50%, -50%);
 }
 .output--work-time,
@@ -816,7 +836,7 @@ h1 button {
   position: absolute;
   bottom: 4px;
   left: 50%;
-  font-size: 24px;
+  font-size: 1.5rem;
   transform: translateX(-50%);
 }
 .output--break::before {
@@ -824,32 +844,53 @@ h1 button {
   position: absolute;
   top: 13px;
   left: 50%;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   transform: translateX(-50%);
 }
 .timer__buttons-block {
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 540px;
+  margin: 0 auto 50px;
 }
 .timer__buttons-block .btn {
   min-width: 123px;
   padding: 0 20px;
 }
+@media (max-width: 768px) {
+  .timer__buttons-block .btn {
+    flex: 1;
+    width: 260px;
+    line-height: 3.2;
+  }
+}
 .timer__buttons-block .btn + .btn {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 .arrow {
-  position: absolute;
+  position: fixed;
   top: 50%;
-  font-size: 42px;
+  font-size: 2.625rem;
   color: #8da5b8;
   transform: translateY(-50%);
 }
 .arrow.icon-arrow-left {
-  left: 37px;
+  left: calc(6.6% - 10px);
+}
+@media (max-width: 1280px) {
+  .arrow.icon-arrow-left {
+    left: calc(3.9% - 10px);
+  }
 }
 .arrow.icon-arrow-right {
-  right: 37px;
+  right: calc(6.6% - 10px);
+}
+@media (max-width: 1280px) {
+  .arrow.icon-arrow-right {
+    right: calc(3.9% - 10px);
+  }
 }
 .arrow span {
   position: absolute;
@@ -910,17 +951,17 @@ h1 button {
 }
 .header .header__nav {
   margin: 56px 0 21px auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #8da5b8;
 }
 @media (max-width: 1280px) {
   .header .header__nav {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
 @media (max-width: 768px) {
   .header .header__nav {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 .header .header__nav li {
@@ -950,7 +991,7 @@ h1 button {
   display: none;
   width: 22px;
   height: 22px;
-  font: bold 14px/22px "PT Sans", sans-serif;
+  font: bold 0.875rem/22px "PT Sans", sans-serif;
   color: #ffffff;
   background-color: #f75c4c;
   border-radius: 50%;
@@ -1000,26 +1041,46 @@ h1 button {
 .note {
   position: fixed;
   bottom: 31px;
-  right: 92px;
+  right: 6.6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-width: 448px;
   height: 50px;
-  font: bold 15px/50px "Roboto", sans-serif;
+  font: bold 0.9375rem/50px "Roboto", sans-serif;
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 2px;
   box-shadow: -15.6px 9px 30.7px 1.3px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 1280px) {
+  .note {
+    right: 3.9%;
+    min-width: 548px;
+    height: 62px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .note {
+    min-width: 92.2%;
+    font-size: 1.375rem;
+  }
+}
 .note .note__icon {
   width: 66px;
-  height: 50px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1280px) {
+  .note .note__icon {
+    width: 80px;
+    font-size: 2.375rem;
+  }
 }
 .note .note__icon::before {
   font-family: 'icons' !important;
@@ -1037,9 +1098,14 @@ h1 button {
   text-align: left;
 }
 .note .note__btn {
-  margin-right: 16px;
-  font-size: 24px;
+  margin-right: 1rem;
+  font-size: 1.5rem;
   transition: color 0.2s;
+}
+@media (max-width: 1280px) {
+  .note .note__btn {
+    font-size: 1.75rem;
+  }
 }
 .note .note__btn:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -1074,13 +1140,28 @@ h1 button {
 
 .categories-list {
   margin: 73px 0 97px;
-  font: normal 16px/1 "Roboto", sans-serif;
+  font: normal 1rem/1 "Roboto", sans-serif;
   text-align: left;
   color: #8da5b8;
+}
+@media (max-width: 1280px) {
+  .categories-list {
+    font-size: 1.1878rem;
+  }
+}
+@media (max-width: 768px) {
+  .categories-list {
+    font-size: 1.4375rem;
+  }
 }
 .categories-list ul {
   max-width: 245px;
   margin: 0 auto;
+}
+@media (max-width: 1280px) {
+  .categories-list ul {
+    max-width: 400px;
+  }
 }
 .categories-list li {
   position: relative;
@@ -1101,14 +1182,25 @@ h1 button {
 .categories-list .component__buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 75px;
-  font: bold 18px/1 "PT Sans", sans-serif;
+  margin: 100px 0 75px 0;
+  font: bold 1.125rem/1 "PT Sans", sans-serif;
+}
+@media (max-width: 768px) {
+  .categories-list .component__buttons {
+    font-size: 1.40625rem;
+  }
 }
 .categories-list .component__buttons a {
   width: 135px;
   line-height: 2.35;
   text-align: center;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .categories-list .component__buttons a {
+    width: 260px;
+    line-height: 3.2;
+  }
 }
 
 .section .section__header {
@@ -1118,11 +1210,28 @@ h1 button {
   color: #8da5b8;
 }
 .section .section__title {
-  font: 300 22px/1 "Roboto", sans-serif;
+  font: 300 1.375rem/1 "Roboto", sans-serif;
+}
+@media (max-width: 1280px) {
+  .section .section__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .section .section__title {
+    padding-top: 60px;
+    font-size: 1.6875rem;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .section .section__title {
+    padding-top: 40px;
+    font-size: 1.6875rem;
+  }
 }
 .section .settings__tabs {
   position: absolute;
-  bottom: 0;
+  top: 2px;
   right: 0;
 }
 /*----------------------------------
@@ -1130,18 +1239,24 @@ h1 button {
 -----------------------------------*/
 .toggles-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 750px;
   margin: 76px auto 67px;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .toggles-list {
+    margin-top: 100px;
+  }
 }
 /*----------------------------------
   Cycle
 -----------------------------------*/
 .cycle .cycle__title {
   margin-bottom: 53px;
-  font: bold 20px/1 "PT Sans", sans-serif;
+  font: bold 1.25rem/1 "PT Sans", sans-serif;
+  color: #ffffff;
 }
 .cycle__chart {
   width: 100%;
@@ -1177,7 +1292,7 @@ h1 button {
 .marked::after {
   content: attr(data-time);
   position: absolute;
-  font: normal 12px/1 "PT Sans", sans-serif;
+  font: normal 0.75rem/1 "PT Sans", sans-serif;
   color: #8da5b8;
 }
 .marked.cycle__item:first-child::before {
@@ -1203,7 +1318,7 @@ h1 button {
 .marked.cycle__item--long-break::after {
   top: -31px;
   right: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   white-space: nowrap;
   transform: translateX(50%);
 }
@@ -1233,12 +1348,24 @@ h1 button {
   display: flex;
   justify-content: center;
   margin: 70px auto 75px;
-  font: bold 18px/1 "PT Sans", sans-serif;
+  font: bold 1.125rem/1 "PT Sans", sans-serif;
+}
+@media (max-width: 768px) {
+  .settings__buttons {
+    font-size: 1.40625rem;
+  }
 }
 .settings__buttons a,
 .settings__buttons button {
   width: 135px;
   line-height: 2.35;
+}
+@media (max-width: 768px) {
+  .settings__buttons a,
+  .settings__buttons button {
+    width: 260px;
+    line-height: 3.2;
+  }
 }
 .settings__buttons .btn-success {
   margin-left: 16px;
@@ -1248,7 +1375,7 @@ h1 button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 50px;
+  margin: 0 0 50px 54px;
   flex-basis: 300px;
 }
 .toggle .toggle__container {
@@ -1258,7 +1385,7 @@ h1 button {
   min-width: 240px;
 }
 .toggle .toggle__title {
-  font: normal 14px/1 "PT Sans", sans-serif;
+  font: normal 0.875rem/1 "PT Sans", sans-serif;
   text-transform: uppercase;
   position: relative;
 }
@@ -1272,16 +1399,31 @@ h1 button {
   border-radius: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 1280px) {
+  .toggle .toggle__title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .toggle .toggle__title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .toggle .toggle__title {
+    font-size: 0.875rem;
+  }
+}
 .toggle .toggle__control {
   display: flex;
   justify-content: space-between;
   width: 100px;
-  font: normal 16px/2 "Roboto", sans-serif;
+  font: normal 1rem/2 "Roboto", sans-serif;
   color: #8da5b8;
   border-bottom: 1px solid #8da5b8;
 }
 .toggle .toggle__control .button {
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .toggle .toggle__control .button--disabled {
   opacity: 0.7;
@@ -1310,22 +1452,33 @@ h1 button {
   color: #ffffff;
 }
 .toggle .toggle__tip {
-  font: normal 14px/3 "PT Sans", sans-serif;
+  font: normal 0.875rem/3 "PT Sans", sans-serif;
   color: #8da5b8;
 }
 .toggle .toggle__tip span {
   color: #ffffff;
 }
 
-/*----------------------------------
-   Temp section
------------------------------------*/
 .tasks-list .section__header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin: 35px 0 20px;
-  height: 1rem;
+}
+@media (max-width: 1280px) {
+  .tasks-list .section__header {
+    margin: 60px 0 30px;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .tasks-list .section__header {
+    margin: 60px 0 60px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .tasks-list .section__header {
+    margin: 40px 0 60px;
+  }
 }
 .tasks-list .tasks-list__trash-tabs {
   display: none;
@@ -1389,7 +1542,7 @@ h1 button {
 .message {
   max-width: 80%;
   margin: 0 auto;
-  font: 300 36px/1.28 "Roboto", sans-serif;
+  font: 300 2.25rem/1.28 "Roboto", sans-serif;
   color: #8da5b8;
 }
 /*----------------------------------
@@ -1446,7 +1599,7 @@ h1 button {
   position: absolute;
   bottom: -90px;
   left: 50%;
-  font-size: 60px;
+  font-size: 3.75rem;
   transform: translateX(-50%);
 }
 /*----------------------------------
@@ -1494,9 +1647,14 @@ h1 button {
     min-height: 114px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
   .task {
     min-height: 121px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .task {
+    min-height: 87px;
   }
 }
 .task .task__left {
@@ -1510,12 +1668,19 @@ h1 button {
 }
 @media (max-width: 1280px) {
   .task .task__left {
+    width: 101px;
     min-height: 114px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
   .task .task__left {
     min-height: 121px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .task .task__left {
+    width: 87px;
+    min-height: 87px;
   }
 }
 .task .task__left button {
@@ -1562,7 +1727,7 @@ h1 button {
   }
 }
 .task .task__date .task__date-month {
-  font: bold 0.6875px/1 "Roboto", sans-serif;
+  font: bold 0.6875rem/1 "Roboto", sans-serif;
   text-transform: uppercase;
 }
 @media (max-width: 1280px) {
@@ -1679,6 +1844,23 @@ h1 button {
   font-size: 40px;
   color: #ffffff;
 }
+@media (max-width: 1280px) {
+  .task .task__right .task__timer-btn {
+    width: 101px;
+    min-height: 114px;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .task .task__right .task__timer-btn {
+    min-height: 121px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .task .task__right .task__timer-btn {
+    width: 87px;
+    min-height: 87px;
+  }
+}
 .task .task__right .task__timer-btn::before {
   content: "\E913";
   position: absolute;
@@ -1711,8 +1893,23 @@ h1 button {
   }
 }
 .task .task__right .task__timer-btn .task__estimation {
-  font: bold 24px/48px "PT Sans", sans-serif;
+  font: bold 1.5rem/48px "PT Sans", sans-serif;
   color: #ffffff;
+}
+@media (max-width: 1280px) {
+  .task .task__right .task__timer-btn .task__estimation {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .task .task__right .task__timer-btn .task__estimation {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .task .task__right .task__timer-btn .task__estimation {
+    font-size: 1.5rem;
+  }
 }
 .daily-tasks .task__timer-btn:hover .task__estimation {
   display: none;
@@ -1742,7 +1939,7 @@ h1 button {
   position: absolute;
   top: -35px;
   left: 22px;
-  font: bold 16px/1 "Roboto", sans-serif;
+  font: bold 1rem/1 "Roboto", sans-serif;
   text-transform: uppercase;
 }
 .task--first .task__left::before {
@@ -1947,49 +2144,87 @@ body.open-modal {
   z-index: 5;
   width: 100%;
   min-height: 100vh;
-  overflow-y: auto;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .modal {
+    background-color: #2a3f50;
+  }
 }
 .modal .form {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 500px;
-  height: 630px;
+  min-width: 500px;
+  min-height: 630px;
   margin: 50px auto;
   text-align: center;
   color: #8da5b8;
   background-color: #2a3f50;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+  .modal .form {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
 .modal .form__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px 4px;
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .modal .form__nav {
+    padding: 35px;
+    font-size: 1.75rem;
+  }
 }
 .modal .form__nav .icon-close {
   margin-left: auto;
 }
 .modal .form__nav .icon-check {
-  margin-left: 15px;
+  margin-left: 1em;
 }
 .modal .form__heading {
   margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+@media (max-width: 768px) {
+  .modal .form__heading {
+    margin-bottom: 40px;
+  }
 }
 .modal .form__field {
   margin: 0 42px 33px;
   padding: 0;
-  font: normal 16px/1 "Roboto", sans-serif;
+  font: normal 1rem/1 "Roboto", sans-serif;
   text-align: left;
   color: #8da5b8;
   border: none;
   border-bottom: 1px solid #425869;
 }
+@media (max-width: 768px) {
+  .modal .form__field {
+    width: 87%;
+    max-width: 595px;
+    margin: 0 auto 33px;
+    font-size: 1.125rem;
+  }
+}
 .modal .form__field .form__title {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .modal .form__field .form__title {
+    font-size: 1rem;
+  }
 }
 .modal .form__field .form__input {
   width: 100%;
@@ -2100,15 +2335,23 @@ body.open-modal {
 -----------------------------------*/
 .form--task_remove .form__message {
   margin: 150px 70px 180px;
-  font: 300 36px/1 "Roboto", sans-serif;
+  font: 300 2.25rem/1 "Roboto", sans-serif;
 }
 .form--task_remove .form__button {
   width: 123px;
-  font: bold 18px/42px "PT Sans", sans-serif;
+  font: bold 1.125rem/42px "PT Sans", sans-serif;
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  .form--task_remove .form__button {
+    width: 40%;
+    margin-bottom: 2rem;
+    font-size: 1.40625rem;
+    line-height: 73px;
+  }
+}
 .form--task_remove .form__button + .form__button {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .report .tabs {
@@ -2117,11 +2360,41 @@ body.open-modal {
 .report__period-tabs {
   margin: 35px auto 125px;
 }
+@media (max-width: 1280px) {
+  .report__period-tabs {
+    margin: 35px auto 180px;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .report__period-tabs {
+    margin: 35px auto 215px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .report__period-tabs {
+    margin: 35px auto 100px;
+  }
+}
 .report__category-tabs {
   margin: 80px auto 50px;
 }
+@media (max-width: 1280px) {
+  .report__category-tabs {
+    margin: 180px auto 50px;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .report__category-tabs {
+    margin: 180px auto 50px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .report__category-tabs {
+    margin: 100px auto 50px;
+  }
+}
 .report__output {
-  width: 700px;
+  width: 85%;
   margin: 0 auto;
   border-collapse: collapse;
 }
