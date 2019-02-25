@@ -2171,6 +2171,7 @@ body.open-modal .bg-wrapper {
   .modal .form {
     left: 0;
     width: 100%;
+    min-width: 520px;
     height: 100%;
     margin: 0;
     transform: none;
