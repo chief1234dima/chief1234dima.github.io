@@ -2137,6 +2137,9 @@ h1 button {
 body.open-modal {
   overflow: hidden;
 }
+body.open-modal .bg-wrapper {
+  min-width: 0;
+}
 .modal {
   position: fixed;
   top: 0;
