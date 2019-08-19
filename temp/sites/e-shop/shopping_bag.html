@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shopping Bag</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/common.css?v=0">
+	<link rel="stylesheet" href="css/bag.css">
+	<script src="js/lodash.js" defer></script>
+	<script src="data/catalog.js?v=1" defer></script>
+	<script src="js/common.js?v=0" defer></script>
+	<script src="js/bag.js" defer></script>
+</head>
+<body>
+<!--HEADER-->
+<header class="content">
+	<div class="header__container-top">
+		<h1 class="logo"><a href="index.html">Template</a></h1>
+		<h1 class="logo-mobile"><a href="index.html">TL</a></h1>
+		
+		<div class="header__aside">
+			<div class="signUp">E-mail sing up</div>
+			<a href="shopping_bag.html" class="bag">Bag <span class="bag__total"></span> (<span class="bag__quantity">0</span>)</a>
+			<div class="menu">
+				<div class="menu__icon">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<nav>
+		<ul>
+			<li><a href="#" data-category="women">Women</a></li>
+			<li><a href="#" data-category="men">Men</a></li>
+			<li><a href="#" data-category="handbags">Handbags</a></li>
+			<li><a href="#" data-category="accessories">Accessories</a></li>
+			<li><a href="#" data-category="sale">Sale</a></li>
+			<li><a href="#" data-category="new arrivals">New Arrivals</a></li>
+			<li><a href="#" data-category="clearance">Clearance</a></li>
+			<li><a href="#" data-category="store locator">Store Locator</a></li>
+		</ul>
+		
+		<div class="search">
+			<div><input type="search" placeholder="Style Name">
+				<button><img src="img/search.svg" alt="" width="13" height="13"></button>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<hr>
+
+<div class="title content">Shopping bag</div>
+
+<hr>
+
+<!--BAG-->
+<div class="cart">
+	<div class="cart__container content">
+		
+		<!--<div class="cart__item" data-id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">-->
+			<!--<a href="item.html" class="item_img new" data-id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">-->
+				<!--<div class="wrap">-->
+					<!--<img src="img/thumbnails/only_skinny_jeans.png" alt="Only Skinny Jeans">-->
+					<!--<div class="layer centered-content">View item</div>-->
+				<!--</div>-->
+			<!--</a>-->
+			<!--<div class="item_description">-->
+				<!--<span class="item_title">Only Skinny Jeans</span>-->
+				<!--<span class="item_price">&#163;65.50</span>-->
+				<!--<div>Color: <span class="item_color">Black</span></div>-->
+				<!--<div>Size: <span class="item_size">UK 18</span></div>-->
+				<!--<div class="item_quantity">Quantity:-->
+					<!--<span class="down"> —</span>-->
+					<!--<span class="quantity">  1  </span>-->
+					<!--<span class="up">+</span>-->
+				<!--</div>-->
+				<!--<span class="btn">Remove item</span>-->
+			<!--</div>-->
+		<!--</div>-->
+		
+	</div>
+	
+	<hr>
+	
+	<div class="cart__promo promo-content">You've qualified for Free UK Next Day Delivery on your order.
+		Don't forget to enter the code <span class="promo">nexday</span> at checkout</div>
+	
+	<div class="cart__btn-box content">
+		<div class="cart__btn-box_empty">Empty bag</div>
+		<div class="cart__btn-box_buy">Buy now</div>
+		<div class="cart__btn-box_total">
+			<div>Total Cost</div>
+			<div class="output">£<span>0.00</span></div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<!--FOOTER-->
+<div class="links">
+	<div class="links__container-head">
+		<div>
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="#">Store locator</a></li>
+				<li><a href="#">Gift cards</a></li>
+				<li><a href="#">Size guide</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</div>
+		
+		<div>
+			<h3>Customer Care</h3>
+			<ul>
+				<li><a href="#">Customer service</a></li>
+				<li><a href="#">Track my order</a></li>
+				<li><a href="#">Return policy</a></li>
+				<li><a href="#">Shipping & delivery</a></li>
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="links__questions">
+		<div class="links__questions-wrap">
+			<div class="links__questions-quest">
+				<h3>Questions</h3>
+				<a href="#">
+					<img src="img/twitter-gray.svg" alt="twitter" width="14" height="14">
+					Tweet us @<b>template</b></a>
+			</div>
+			
+			<div class="links__questions-order">
+				<h3>Order by phone</h3>
+				<a href="tel:+88004094712">8-800-409-47-12</a>
+			</div>
+		</div>
+		
+		<div class="links__temp">
+			We have our own delivery service which<br>
+			operates in 23 major European cities. Delivery<br>
+			time - 3-5 days.
+		</div>
+		
+		<div class="social">
+			<ul>
+				<li><a href="#"><img src="img/facebook-letter-logo.svg" alt="facebook" width="14" height="14"></a></li>
+				<li><a href="#"><img src="img/twitter-lightblue.svg" alt="twitter" width="14" height="14"></a></li>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+<hr>
+<footer>
+	<div class="footer__temp">
+		<ul>
+			<li><a href="#">Legal notice</a></li>
+			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#">Site map</a></li>
+		</ul>
+		
+		<div class="social">
+			<ul>
+				<li><a href="#"><img src="img/facebook-letter-logo.svg" alt="facebook" width="14" height="14"></a></li>
+				<li><a href="#"><img src="img/twitter-lightblue.svg" alt="twitter" width="14" height="14"></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="copyright content">
+		<div>© 2010–2015, The Template Group inc.</div>
+		<div class="counter">Share <span class="counter__output">1 437</span></div>
+		
+		<ul class="footer__links-tablet">
+			<li><a href="#">Legal notice</a></li>
+			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#">Site map</a></li>
+		</ul>
+	</div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EPAM Spring 2018 - homepage</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/common.css?v=7">
+	<link rel="stylesheet" href="css/start.css?v=6">
+	<script src="data/catalog.js" defer></script>
+	<script src="js/common.js?v=4" defer></script>
+	<script src="js/start.js?v=4" defer></script>
+</head>
+<body>
+ <!--HEADER-->
+<header class="content">
+	<div class="header__container-top">
+		<h1 class="logo"><a href="index.html">Template</a></h1>
+		<h1 class="logo-mobile"><a href="index.html">TL</a></h1>
+		
+		<div class="header__aside">
+			<div class="signUp">E-mail sing up</div>
+			<a href="shopping_bag.html" class="bag">Bag <span class="bag__total"></span> (<span class="bag__quantity">0</span>)</a>
+			<div class="menu">
+				<div class="menu__icon">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<nav>
+		<ul>
+			<li><a href="#" data-category="women">Women</a></li>
+			<li><a href="#" data-category="men">Men</a></li>
+			<li><a href="#" data-category="handbags">Handbags</a></li>
+			<li><a href="#" data-category="accessories">Accessories</a></li>
+			<li><a href="#" data-category="sale">Sale</a></li>
+			<li><a href="#" data-category="new arrivals">New Arrivals</a></li>
+			<li><a href="#" data-category="clearance">Clearance</a></li>
+			<li><a href="#" data-category="store locator">Store Locator</a></li>
+		</ul>
+		
+		<div class="search">
+			<div><input type="search" placeholder="Style Name">
+				<button><img src="img/search.svg" alt="" width="13" height="13"></button>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<hr>
+<!--SLIDER-->
+<div class="slider">
+	<div class="slider__container promo-content">
+		
+		<div class="slider__item fade">
+			<a href="catalog.html">
+				<img src="img/slider/1.jpg" alt="New collection 'Black White spring-summer'">
+			</a>
+		</div>
+		
+		<div class="slider__item fade certain-item">
+			<a href="item.html">
+				<img src="img/slider/2.jpg" alt="Up to 30% off your favorite styles">
+			</a>
+		</div>
+		
+		<div class="slider__item fade">
+			<a href="catalog.html">
+				<picture>
+					<source srcset="img/slider/3_mobile.jpg" media="(max-width: 424px)">
+					<source srcset="img/slider/3.jpg" media="(min-width: 425px)">
+					<img src="img/slider/3.jpg" alt="Stock up on laid-back threads with 75% on summer clothes">
+				</picture>
+			</a>
+		</div>
+		
+		<span class="prev"><img src="img/angle-to-left.svg" alt="previous slide" width="18" height="25"></span>
+		<span class="next"><img src="img/angle-to-right.svg" alt="next slide" width="18" height="25"></span>
+	</div>
+	
+	<hr>
+	
+	<div class="slider__pager promo-content centered-content">
+		<span class="dot" data-number="0"></span>
+		<span class="dot" data-number="1"></span>
+		<span class="dot" data-number="2"></span>
+	</div>
+</div>
+
+<hr>
+<!--BANNER-->
+<div class="banner-start promo-content">
+	<a class="banner__item-red" href="item.html">
+		<img src="img/nike-red.jpg" alt="Nike Red">
+		<h3>Nike Red</h3>
+	</a>
+	
+	<a class="banner__item-tablet" href="catalog.html">
+		<img src="img/caps_tablet.png" alt="70% off on accessories">
+		<div>
+			<h3 class="caps__header-tablet">Sale</h3>
+			<span class="caps__text-tablet">-70%</span>
+		</div>
+	</a>
+	
+	<a class="banner__item--desktop" href="catalog.html">
+		<img src="img/start_banner_right.png" alt="Clearance sale on caps and hats">
+		<div>
+			<h3 class="caps__header-desktop">Caps & Hats</h3>
+			<span class="caps__text-desktop">Sale -50%</span>
+		</div>
+	</a>
+</div>
+
+<hr>
+
+<!--ARRIVALS-->
+<section class="arrivals content">
+	<div class="arrivals__container">
+		<h2>New arrivals</h2>
+		
+		<div class="arrivals__items-container">
+			
+			<a href="catalog.html" class="item new" data-id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">
+				<div class="wrap">
+					<img src="img/thumbnails/only_skinny_jeans.png" alt="Only Skinny Jeans">
+					<div class="layer centered-content">View item</div>
+				</div>
+				<span class="item__title">Only Skinny Jeans</span>
+				<span class="item__price">&#163;65.50</span>
+			</a>
+			
+			<a href="catalog.html" class="item new" data-id="8b300772-eee3-4ff1-b091-e89f17e0e469">
+				<div class="wrap">
+					<img src="img/thumbnails/neck_knitted_jumper.png" alt="Neck Knitted Jumper">
+					<div class="layer centered-content">View item</div>
+				</div>
+				<span class="item__title">Neck Knitted Jumper</span>
+				<span class="item__price">&#163;76.25</span>
+			</a>
+			
+			<a href="catalog.html" class="item" data-id="9ded7821-e510-4a16-ba9f-57c1e3442ad8">
+				<div class="wrap">
+					<img src="img/thumbnails/turtle_neck_jumper_in_rib.png" alt="Turtle Neck Jumper in Rib">
+					<div class="layer centered-content">View item</div>
+				</div>
+				<span class="item__title">Turtle Neck Jumper in Rib</span>
+				<span class="item__price">&#163;130.25</span>
+			</a>
+			
+			<a href="catalog.html" class="item" data-id="739d3ae0-6dca-4453-a7a4-a94b841a296d">
+				<div class="wrap">
+					<img src="img/thumbnails/with_patchwork_crochet.png" alt="Neck Knitted Jumper">
+					<div class="layer centered-content">View item</div>
+				</div>
+				<span class="item__title">With Patchwork Crochet</span>
+				<span class="item__price">&#163;80.60</span>
+			</a>
+			
+		</div>
+		<a href="catalog.html" class="arrivals_btn">All arrivals</a>
+	</div>
+</section>
+<hr>
+
+<!--FOOTER-->
+<div class="links">
+	<div class="links__container-head ">
+		<div>
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="#">Store locator</a></li>
+				<li><a href="#">Gift cards</a></li>
+				<li><a href="#">Size guide</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</div>
+		
+		<div>
+			<h3>Customer Care</h3>
+			<ul>
+				<li><a href="#">Customer service</a></li>
+				<li><a href="#">Track my order</a></li>
+				<li><a href="#">Return policy</a></li>
+				<li><a href="#">Shipping & delivery</a></li>
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="links__questions">
+		<div class="links__questions-wrap">
+			<div class="links__questions-quest">
+				<h3>Questions</h3>
+				<a href="#">
+					<img src="img/twitter-gray.svg" alt="twitter" width="14" height="14">
+					Tweet us @<b>template</b></a>
+			</div>
+			
+			<div class="links__questions-order">
+				<h3>Order by phone</h3>
+				<a href="tel:+88004094712">8-800-409-47-12</a>
+			</div>
+		</div>
+		
+		<div class="links__temp">
+			We have our own delivery service which<br>
+			operates in 23 major European cities. Delivery<br>
+			time - 3-5 days.
+		</div>
+		
+		<div class="social">
+			<ul>
+				<li><a href="#"><img src="img/facebook-letter-logo.svg" alt="facebook" width="14" height="14"></a></li>
+				<li><a href="#"><img src="img/twitter-lightblue.svg" alt="twitter" width="14" height="14"></a></li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+ 
+ <hr>
+ <footer>
+	<div class="footer__temp">
+		<ul>
+			<li><a href="#">Legal notice</a></li>
+			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#">Site map</a></li>
+		</ul>
+		
+		<div class="social">
+			<ul>
+				<li><a href="#"><img src="img/facebook-letter-logo.svg" alt="facebook" width="14" height="14"></a></li>
+				<li><a href="#"><img src="img/twitter-lightblue.svg" alt="twitter" width="14" height="14"></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="copyright content">
+		<div>© 2010–2015, The Template Group inc.</div>
+		<div class="counter">Share <span class="counter__output">1 437</span></div>
+		
+		<ul class="footer__links-tablet">
+			<li><a href="#">Legal notice</a></li>
+			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#">Site map</a></li>
+		</ul>
+	</div>
+	
+</footer>
+
+</body>
+</html>
