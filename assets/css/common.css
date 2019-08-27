@@ -44,6 +44,10 @@ ul {
 
 .over-hidden { overflow: hidden; }
 
+.text-center { text-align: center; }
+
+.top-indent { padding-top: 1em; }
+
 /*-------------------------------------------
   2. Buttons
 -------------------------------------------*/
