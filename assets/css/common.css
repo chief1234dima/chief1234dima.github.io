@@ -399,6 +399,25 @@ footer nav a:hover { color: #54ad37; }
 
   header .white-text { color: white; }
 
+  .white-text .logo img { display: none; }
+
+  .sticky-header .white-text .logo img { display: inline-block; }
+
+  .white-text .logo {
+    height: 100%;
+    margin: 0;
+    padding-left: 100px;
+    background-image: url(../img/logo_white.png);
+    background-position: 0 0;
+    background-size: 90px 100px;
+    background-repeat: no-repeat;
+  }
+
+  .sticky-header .white-text .logo {
+    padding-left: 0;
+    background: none;
+  }
+
   .sticky-header .slow-underscore::before { border-color: #54ad37; }
 
   .nav-toggle { display: none; }
