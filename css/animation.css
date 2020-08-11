@@ -1,0 +1,60 @@
+/*-------------------------------------------
+  Animation
+-------------------------------------------*/
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes snow {
+  0% {background-position: 0 0, 0 0, 0 0;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@keyframes main-box-show {
+  0% {
+    right: -999px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes main-box-hide {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: -999px;
+    opacity: 0;
+  }
+}
+
+@keyframes shiftVert {
+  0% { transform: translate(0, -200px); }
+  100% { transform: none; }
+}
+
+@keyframes shiftHoriz {
+  0% { transform: translate(-100px, 0) translateY(50vh) translateY(-50%); }
+  100% { transform: translateY(50vh) translateY(-50%); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn03 {
+  0% { opacity: 0; }
+  100% { opacity: 0.3; }
+}
